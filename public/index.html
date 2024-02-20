@@ -44,21 +44,28 @@
           </h6>
         </div>
         <div class="flex md:flex-row justify-center flex-col items-center my-3 gap-1 md:p-2">
-        <div class="relative border border-gray-400 px-4 pt-1 pb-4 rounded-md bg-white w-44 md:w-52 md:px-4 md:pt-2 md:pb-5">
-        <label htmlFor="zip-code" class="text-xs font-semibold text-gray-500 block">ZIP CODE</label>
-        <input
-            class="w-full pr-6 rounded-none border-none text-left focus:border-none focus:ring-0 text-black text-bold"
-            type="text"
-            value="44040"
-            readOnly
-          />
-        <img
-          class="absolute inset-y-0 right-0 pr-2 flex items-center mt-6 mr-2"
-          src="https://affordablehealthplans.org/wp-content/uploads/2023/04/green-check.svg"
-          alt="Success"
-          id="icon-success"
-        />
-      </div>
+          <div class="relative border border-gray-400 px-4 pt-1 pb-4 rounded-md bg-white w-44 md:w-52 md:px-4 md:pt-2 md:pb-5" id="zip-code-container">
+            <label htmlFor="zip-code-input" class="text-xs font-semibold text-gray-500 block">ZIP CODE</label>
+            <input
+                id="zip-code-input"
+                class="w-full pr-6 rounded-none border-none text-left focus:border-none focus:ring-0 text-black text-bold"
+                type="text"
+                value="44040"
+                readOnly
+            />
+            <img
+              class="absolute inset-y-0 right-0 pr-2 flex items-center mt-6 mr-2"
+              src="https://affordablehealthplans.org/wp-content/uploads/2023/04/green-check.svg"
+              alt="Success"
+              id="icon-success"
+            />
+        </div>
+
+        <script>
+          document.getElementById('zip-code-container').addEventListener('click', function() {
+              document.getElementById('zip-code-input').focus();
+          });
+        </script>
   
         <button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-5 w-[290px] rounded-md text-xl md:px-2 md:py-5 mt-2 md:mt-0">
           START MY QUOTE
@@ -288,22 +295,28 @@
             <span class='text-[#e011f3] px-1'>NO OBLIGATION</span>TO ENROLL
           </h6>
           <div class=" flex md:flex-row flex-col gap-4 justify-center my-6 ">
-            <div class="flex items-center justify-between border border-gray-700  px-4 py-2 rounded-[10px] bg-white ">
+            <div class="flex items-center justify-between border border-gray-700 px-4 py-2 rounded-[10px] bg-white" id="zip-code-container-2">
               <div>
-                <p class=' text-left'>Zip Code</p>
-                <input
-                  class=" rounded-none border-none focus-visible:border-none"
-                  type="text"
-                  value="44040"
-                />
+                  <p class='text-left'>Zip Code</p>
+                  <input
+                      id="zip-code-input-2"
+                      class="rounded-none border-none focus-visible:border-none"
+                      type="text"
+                      value="44040"
+                  />
               </div>
               <img
                 class="absolute inset-y-0 right-0 pr-2 flex items-center mt-6 mr-2"
                 src="https://affordablehealthplans.org/wp-content/uploads/2023/04/green-check.svg"
                 alt="Success"
-                id="icon-success"
+                id="icon-success-2"
               />
-            </div>
+          </div>
+          <script>
+            document.getElementById('zip-code-container-2').addEventListener('click', function() {
+                document.getElementById('zip-code-input-2').focus();
+            });
+          </script>
             <div class=" flex justify-center items-center py-4 bg-pink-700 rounded-[10px] px-10 text-2xl font-medium text-white hover:bg-pink-800 cursor-pointer">
               Start My Quote
             </div>
